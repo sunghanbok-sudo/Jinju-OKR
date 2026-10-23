@@ -1,0 +1,279 @@
+{
+  "year": 2026,
+  "quarter": 4,
+  "period": "4분기 (10~12월)",
+  "team": "육가공마케팅팀",
+  "leader": "복성한",
+  "writtenDate": "26.10.02",
+  "source": {
+    "filename": "진주햄_분기별_OKR_등록양식_26년_4분기_육가공마케팅팀.xlsx",
+    "sha256": "96bf59cc1fd658cb6205393d8003822cd8951e7b998c1225f9b85dd1c2c07cf5",
+    "sheet": "1. OKR 계획 시트(양식)",
+    "range": "B9:I30"
+  },
+  "people": [
+    {
+      "name": "권미연",
+      "objectives": [
+        {
+          "title": "장안유업 치즈 기반 전략 NPD 확대 및 B2B 사업화 기반 구축\n(베트남 그릴링치즈, 샐러디 크림치즈, 내열성 크림치즈/롤치즈)",
+          "results": [
+            {
+              "row": 9,
+              "title": "베트남향 구워먹는치즈 제품 스펙 확정 및 사업화 검토안 도출",
+              "detail": "베트남 시장 요구조건 및 장안유업 생산조건을 반영하여 원료·규격·가격대별 제품 스펙을 구체화하고, 샘플 평가를 통해 사업화 가능 여부 도출",
+              "kpiLinked": true,
+              "kpi": "상품 사업 중점 추진 과제 실행 (구워먹는치즈 전략적 상품화 설계 및 채널 확대 모색)",
+              "efficiency": false,
+              "innovation": true
+            },
+            {
+              "row": 10,
+              "title": "내열성 치즈 용도별 샘플 평가 완료 및 제품 개선 방향 확정",
+              "detail": "고객 용도별 요구조건을 기준으로 내열성·물성·관능을 평가하고, 기존 제품 대비 개선 스펙 및 후속 개발 방향 확정",
+              "kpiLinked": true,
+              "kpi": "상품 사업 중점 추진 과제 실행 (채널별 B2B 치즈 사업 검토)",
+              "efficiency": false,
+              "innovation": true
+            },
+            {
+              "row": 11,
+              "title": "치즈 Variation 개발 Pool 확대 및 B2B 제안 아이템 구체화",
+              "detail": "Corn·K-flavor·Buttermilk 및 샐러디/CVS/B2B용 Variation을 검토하여 적용 가능 아이템을 선별하고 후속 NPD 후보군 확보",
+              "kpiLinked": true,
+              "kpi": "상품 사업 중점 추진 과제 실행 (채널별 B2B 치즈 사업 검토)",
+              "efficiency": false,
+              "innovation": true
+            }
+          ]
+        },
+        {
+          "title": "27년 냉동간식 NPD 파이프라인 확보 및 출시 준비\n(한입 핫도그, 콘치즈 붕어빵, 미니피자, 팬케익)",
+          "results": [
+            {
+              "row": 12,
+              "title": "27년 전략 냉동간식 NPD 후보 선정 및 제품별 개발 로드맵 확정",
+              "detail": "한입 핫도그·콘치즈 붕어빵·미니피자·냉동 팬케익 등 후보의 시장성·원가·제조 가능성 및 채널 적합성을 비교\n우선 개발 품목과 출시 로드맵 확정",
+              "kpiLinked": true,
+              "kpi": "상품 사업 중점 추진 과제 실행 (채널별 B2C 치즈 사업 검토)",
+              "efficiency": false,
+              "innovation": true
+            },
+            {
+              "row": 13,
+              "title": "우선 NPD 품목 제조사 선정 및 샘플 평가 단계 진입",
+              "detail": "선정 품목별 제조사 CAPA·MOQ·원가를 검토하고 샘플 개발 및 평가를 진행하여 27년 출시를 위한 개발 기반 확보",
+              "kpiLinked": true,
+              "kpi": "상품 사업 중점 추진 과제 실행 (채널별 B2C 치즈 사업 검토)",
+              "efficiency": false,
+              "innovation": true
+            }
+          ]
+        },
+        {
+          "title": "운영 상품 생산 안정화 및 공급구조 개선\n(방과후 핫도그, 호떡)",
+          "results": [
+            {
+              "row": 14,
+              "title": "방과후 핫도그 생산처 이관 확정 및 양산 준비 완료",
+              "detail": "기존 제조사 생산중단(26.12.31)에 대응하여 대체 생산처의 견적·MOQ·품질·생산조건을 확정하고 안정적인 공급 전환 준비 완료",
+              "kpiLinked": true,
+              "kpi": "상품 사업 중점 추진 과제 실행 (천하장사 브랜드 기반 신규 카테고리 확장)",
+              "efficiency": true,
+              "innovation": false
+            },
+            {
+              "row": 15,
+              "title": "땅콩꿀호떡 제조사 이관 및 패키지 전환 완료",
+              "detail": "제조사 이관에 따른 표시사항 검수, 디자인 리뉴얼 및 포장재 제작을 완료하고 초도 생산까지 연계하여 운영 공백 최소화",
+              "kpiLinked": true,
+              "kpi": "상품 사업 중점 추진 과제 실행 (대형 카테고리 사업 관리 강화 및 최적화 추진)",
+              "efficiency": true,
+              "innovation": false
+            }
+          ]
+        },
+        {
+          "title": "신규 통매입 상품 사업성 검토 및 운영 확대 기반 확보",
+          "results": [
+            {
+              "row": 16,
+              "title": "전략 통매입 후보 상품 사업성 평가 및 운영 여부 의사결정",
+              "detail": "마루베니 냉동치킨·종근당 등 신규 통매입 후보의 시장가격·매입조건·MOQ·손익·채널 적합성을 분석하여 운영 가능 상품 선별 및 거래조건 확정",
+              "kpiLinked": true,
+              "kpi": "상품 사업 중점 추진 과제 실행",
+              "efficiency": false,
+              "innovation": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "노경진",
+      "objectives": [
+        {
+          "title": "27년 저가동 대응을 위한 신규 물량 및 공장 운영 과제 검토",
+          "results": [
+            {
+              "row": 17,
+              "title": "신규 물량 확보 가능 과제 2건 이상 비교 검토 및 검토 방향 정리",
+              "detail": "* 대형거래처 OEM, 외주 품목 인하우스 전환 등 논산공장 신규 확보 가능 물량 과제별 물량·판가·원가 검토\n* 고정비 Cover 기여도 관점에서 과제점검",
+              "kpiLinked": true,
+              "kpi": "논산공장 원가 개선",
+              "efficiency": true,
+              "innovation": false
+            },
+            {
+              "row": 18,
+              "title": "설비투자 우선순위 및 투자 연계 가능 신제품 검토",
+              "detail": "* 투자 시 확보 가능한 CAPA와 연계 가능한 신제품 후보 검토\n* 투자 검토에 필요한 예상 물량·CAPA·사업성 자료 정리",
+              "kpiLinked": false,
+              "kpi": "",
+              "efficiency": false,
+              "innovation": true
+            }
+          ]
+        },
+        {
+          "title": "축육 부진 품목 원인 파악 및 개선과제 도출",
+          "results": [
+            {
+              "row": 19,
+              "title": "공장 원가·판매 데이터 정기 점검 및 주요 이슈 정리",
+              "detail": "* 월 마감 손익 데이터 기반 부진 품목 점검 및 손익 악화 원인 점검\n* 채널·제품군·거래처별 손익 변화 및 주요 증감요인 정리\n* 월 단위 점검 자료 보고 및 육가공 협의체를 통해 정기 이슈 논의",
+              "kpiLinked": true,
+              "kpi": "논산공장 원가 개선",
+              "efficiency": false,
+              "innovation": false
+            },
+            {
+              "row": 20,
+              "title": "부진 품목·거래처 원인 진단 및 우선 검토과제 정리",
+              "detail": "* 부진 사유를 구체적 원인점검을 통해 유형 구분\n* 손실 규모·지속성 등을 기준으로 우선 검토 대상 정리\n* 배합·생산처·규격 변경 등 원가 개선안의 적용 가능성 검토",
+              "kpiLinked": false,
+              "kpi": "",
+              "efficiency": true,
+              "innovation": false
+            }
+          ]
+        },
+        {
+          "title": "신제품 개발 및 27년 NPD 파이프라인 확보",
+          "results": [
+            {
+              "row": 21,
+              "title": "전략채널(쿠팡·마켓컬리·오아시스) 신규 NPD 방향성 점검 및 제안 후보 정리",
+              "detail": "* 채널별 판매 데이터·시장 조사 기반 신규 NPD 방향성 점검\n* 건강하닭 닭가슴살바·순수안심 슬라이스햄 등 온라인 신규 예정 제품 배합·규격·손익 점검\n* 설비 및 생산조건 협의를 통한 출시 조건 조율",
+              "kpiLinked": true,
+              "kpi": "대형 NPD 개발",
+              "efficiency": false,
+              "innovation": true
+            },
+            {
+              "row": 22,
+              "title": "논산, HMR 27년 NPD 개발 후보 구체화 및 출시 가능성 검토",
+              "detail": "* 신제품 규격 구현에 필요한 설비·생산조건 사전 점검 및 HMR 신규 거래선 컨텍\n* 설비 투자 필요 시 투자 대비 사업성 검토, HMR 신제품 방향성 및 허들 점검\n* 배합·규격·손익 검토 및 출시 가능 시 초기 판매계획 검토",
+              "kpiLinked": false,
+              "kpi": "",
+              "efficiency": false,
+              "innovation": true
+            },
+            {
+              "row": 23,
+              "title": "꼬치후랑크 월별 시장판매 데이터 기반 개발 방향 검토",
+              "detail": "* 월별 시장 판매 데이터로 채널·제조사·SKU 동향 분석\n* 경쟁 구도 변화를 반영한 Flavor·스펙 개발 방향 검토\n* 분석 결과를 개발 과제 우선순위 검토의 근거로 활용",
+              "kpiLinked": true,
+              "kpi": "대형 NPD 개발",
+              "efficiency": false,
+              "innovation": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "정나라",
+      "objectives": [
+        {
+          "title": "B2B NPD 사업화 및 매출 확대 기반 강화",
+          "results": [
+            {
+              "row": 24,
+              "title": "고객사 요청 기반 NPD 2건 사양 확정 및 출시 리딩",
+              "detail": "NPD 사양·원가·생산·일정 전반을 통합 관리하여 안정적 출시 및 수익성 확보",
+              "kpiLinked": true,
+              "kpi": "대형 NPD 개발",
+              "efficiency": true,
+              "innovation": false
+            },
+            {
+              "row": 25,
+              "title": "출시 NPD 후속 운영 점검 및 추가 매출 확대 방안 도출",
+              "detail": "초기 운영 현황과 고객사 피드백 점검하여 추가 물량·적용처 확대 등 후속 매출 확대 기반 마련",
+              "kpiLinked": true,
+              "kpi": "대형 NPD 개발",
+              "efficiency": true,
+              "innovation": true
+            }
+          ]
+        },
+        {
+          "title": "B2B 채널·거래처 맞춤형 선제 제안 경쟁력 강화",
+          "results": [
+            {
+              "row": 26,
+              "title": "거래처별 사업 특성 및 니즈 기반 맞춤형 제안 아이템 3건 이상 발굴",
+              "detail": "거래처별 사업 유형, 주요 제품 및 채널 특성을 분석하여 니즈에 부합하는 맞춤형 제안 아이템 발굴 및 제품 개발 방향 구체화",
+              "kpiLinked": true,
+              "kpi": "대형 NPD 개발",
+              "efficiency": true,
+              "innovation": true
+            },
+            {
+              "row": 27,
+              "title": "주요 거래처·경쟁사 Benchmark 기반 B2B 시장·제품 정보 DB 고도화",
+              "detail": "니즈 및 시장 정보를 체계적으로 수집·업데이트하여 거래처별 선제 제안의 기초자료 활용",
+              "kpiLinked": false,
+              "kpi": "",
+              "efficiency": true,
+              "innovation": false
+            },
+            {
+              "row": 28,
+              "title": "선제 개발 제품 Target 거래처 제안 및 고객 피드백 확보",
+              "detail": "개발 제품 선제적 제안 진행 및 고객사 피드백 확보하여 후속 NPD 개발 및 사업화 가능성 검토",
+              "kpiLinked": true,
+              "kpi": "대형 NPD 개발",
+              "efficiency": true,
+              "innovation": true
+            }
+          ]
+        },
+        {
+          "title": "OEM·HMR 운영 품목 경쟁력 강화 및 운영 효율화",
+          "results": [
+            {
+              "row": 29,
+              "title": "주요 운영 품목별 수익성·판매·품질·공급 Risk 점검 및 개선과제 도출",
+              "detail": "담당 OEM·HMR 품목의 수익성·판매·품질·공급 현황을 종합 점검하여 판매 확대 및 품목 경쟁력 강화를 위한 개선과제 도출",
+              "kpiLinked": true,
+              "kpi": "담당 카테고리 재무 목표 달성",
+              "efficiency": false,
+              "innovation": false
+            },
+            {
+              "row": 30,
+              "title": "OEM 제조사 및 생산 품목 Pool 구축을 통한 신속 대응 기반 마련",
+              "detail": "기존 거래처 및 신규 OEM 제조사의 생산 가능 품목·역량 사전 파악하여 품질·가격·공급 이슈, 리뉴얼 및 NPD 발생 시 적합 제조사 신속 발굴 기반 마련",
+              "kpiLinked": true,
+              "kpi": "담당 카테고리 재무 목표 달성",
+              "efficiency": true,
+              "innovation": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

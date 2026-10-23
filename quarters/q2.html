@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>육가공마케팅팀 2026 2분기 OKR 대시보드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #0d0f1a;
+            --surface: #151726;
+            --surface2: #1c1f35;
+            --border: rgba(255, 255, 255, 0.07);
+            --accent1: #6c63ff;
+            --accent2: #f7567c;
+            --accent3: #43c6ac;
+            --text: #e8eaf6;
+            --text-muted: #7b7fa8;
+            --kpi-accent: #ffd166;
+            --kr-done: rgba(67, 198, 172, 0.12);
+            --kr-border: #43c6ac;
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 0 0 60px 0;
+        }
+
+        /* ─── HEADER ─── */
+        header {
+            background: linear-gradient(135deg, #1a1440 0%, #0d0f1a 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 28px 40px 22px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent1), var(--accent2));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .header-text p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 3px;
+        }
+
+        .header-badge {
+            margin-left: auto;
+            background: rgba(108, 99, 255, 0.15);
+            border: 1px solid rgba(108, 99, 255, 0.3);
+            color: #a79fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 5px 14px;
+            border-radius: 99px;
+        }
+
+        /* ─── MAIN LAYOUT ─── */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 36px 24px 0;
+        }
+
+        /* ─── TEAM KPI SECTION ─── */
+        .kpi-section {
+            margin-bottom: 36px;
+        }
+
+        .section-toggle {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            user-select: none;
+            margin-bottom: 20px;
+        }
+
+        .section-toggle:hover .toggle-icon {
+            background: rgba(255, 209, 102, 0.2);
+        }
+
+        .toggle-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 209, 102, 0.1);
+            border: 1px solid rgba(255, 209, 102, 0.3);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: background .2s;
+        }
+
+        .section-toggle h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--kpi-accent);
+            letter-spacing: -0.01em;
+        }
+
+        .section-toggle .chevron {
+            margin-left: auto;
+            font-size: 14px;
+            color: var(--text-muted);
+            transition: transform .3s;
+        }
+
+        .section-toggle.open .chevron {
+            transform: rotate(180deg);
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            animation: fadeIn .3s ease;
+        }
+
+        @media (max-width: 900px) {
+            .kpi-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .kpi-card {
+            background: var(--surface);
+            border: 1px solid rgba(255, 209, 102, 0.12);
+            border-radius: var(--radius);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--kpi-accent), transparent);
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .kpi-card-num {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--kpi-accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .kpi-card-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .kpi-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 7px;
+        }
+
+        .kpi-bullet {
+            width: 5px;
+            height: 5px;
+            background: var(--kpi-accent);
+            border-radius: 50%;
+            margin-top: 7px;
+            flex-shrink: 0;
+        }
+
+        .kpi-item span {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* ─── PERSON TABS ─── */
+        .tabs-section {}
+
+        .tabs-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .tabs-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            border-radius: 99px;
+            border: 1.5px solid var(--border);
+            background: var(--surface);
+            color: var(--text-muted);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all .25s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab-btn:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            color: var(--text);
+        }
+
+        .tab-btn.active {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tab-btn.p0.active {
+            background: linear-gradient(135deg, #6c63ff, #a78bfa);
+            box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        .tab-btn.p1.active {
+            background: linear-gradient(135deg, #f7567c, #ff8c69);
+            box-shadow: 0 4px 20px rgba(247, 86, 124, 0.4);
+        }
+
+        .tab-btn.p2.active {
+            background: linear-gradient(135deg, #43c6ac, #1a9c7e);
+            box-shadow: 0 4px 20px rgba(67, 198, 172, 0.4);
+        }
+
+        .tab-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .tab-btn.p0 .tab-avatar {
+            background: rgba(108, 99, 255, 0.2);
+            color: #a78bfa;
+        }
+
+        .tab-btn.p0.active .tab-avatar {
+            background: rgba(255, 255, 255, 0.25);
+            color: #fff;
+        }
+
+        .tab-btn.p1 .tab-avatar {
+            background: rgba(247, 86, 124, 0.2);
+            color: #ff8c69;
+        }
+
+        .tab-btn.p1.active .tab-avatar {
+            background: rgba(255, 255, 255, 0.25);
+            color: #fff;
+        }
+
+        .tab-btn.p2 .tab-avatar {
+            background: rgba(67, 198, 172, 0.2);
+            color: #43c6ac;
+        }
+
+        .tab-btn.p2.active .tab-avatar {
+            background: rgba(255, 255, 255, 0.25);
+            color: #fff;
+        }
+
+        /* ─── PERSON PANEL ─── */
+        .person-panel {
+            display: none;
+            animation: fadeIn .35s ease;
+        }
+
+        .person-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+            padding: 20px 24px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .panel-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        .p0 .panel-avatar {
+            background: linear-gradient(135deg, #6c63ff, #a78bfa);
+        }
+
+        .p1 .panel-avatar {
+            background: linear-gradient(135deg, #f7567c, #ff8c69);
+        }
+
+        .p2 .panel-avatar {
+            background: linear-gradient(135deg, #43c6ac, #1a9c7e);
+        }
+
+        .panel-meta h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .panel-meta span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .panel-stats {
+            margin-left: auto;
+            display: flex;
+            gap: 24px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .stat-lbl {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .p0 .stat-num {
+            color: #a78bfa;
+        }
+
+        .p1 .stat-num {
+            color: #ff8c69;
+        }
+
+        .p2 .stat-num {
+            color: #43c6ac;
+        }
+
+        /* ─── OBJECTIVE CARD ─── */
+        .objectives {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .objective-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .obj-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .obj-num {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .p0 .obj-num {
+            background: rgba(108, 99, 255, 0.2);
+            color: #a78bfa;
+        }
+
+        .p1 .obj-num {
+            background: rgba(247, 86, 124, 0.2);
+            color: #ff8c69;
+        }
+
+        .p2 .obj-num {
+            background: rgba(67, 198, 172, 0.2);
+            color: #43c6ac;
+        }
+
+        .obj-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .obj-tag {
+            margin-left: auto;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 99px;
+            white-space: nowrap;
+        }
+
+        .p0 .obj-tag {
+            background: rgba(108, 99, 255, 0.12);
+            color: #a78bfa;
+            border: 1px solid rgba(108, 99, 255, 0.25);
+        }
+
+        .p1 .obj-tag {
+            background: rgba(247, 86, 124, 0.12);
+            color: #ff8c69;
+            border: 1px solid rgba(247, 86, 124, 0.25);
+        }
+
+        .p2 .obj-tag {
+            background: rgba(67, 198, 172, 0.12);
+            color: #43c6ac;
+            border: 1px solid rgba(67, 198, 172, 0.25);
+        }
+
+        .kr-list {
+            padding: 16px 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .kr-item {
+            background: var(--surface2);
+            border-left: 3px solid;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 14px 16px;
+            transition: transform .2s;
+        }
+
+        .kr-item:hover {
+            transform: translateX(4px);
+        }
+
+        .p0 .kr-item {
+            border-color: #6c63ff;
+        }
+
+        .p1 .kr-item {
+            border-color: #f7567c;
+        }
+
+        .p2 .kr-item {
+            border-color: #43c6ac;
+        }
+
+        .kr-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .p0 .kr-label {
+            color: #8b84ff;
+        }
+
+        .p1 .kr-label {
+            color: #f7567c;
+        }
+
+        .p2 .kr-label {
+            color: #43c6ac;
+        }
+
+        .kr-text {
+            font-size: 0.85rem;
+            line-height: 1.65;
+            color: var(--text);
+        }
+
+        .kr-detail {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            line-height: 1.6;
+        }
+
+        .quarter-nav {display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:28px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);}
+        .quarter-nav label {font-weight:700;font-size:.9rem;}
+        .quarter-nav select {font:inherit;color:var(--text);background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;cursor:pointer;max-width:100%;}
+        .quarter-nav p {font-size:.78rem;color:var(--text-muted);}
+        .obj-title,.kr-detail {white-space:pre-line;overflow-wrap:anywhere;}
+        header {flex-wrap:wrap;}
+        @media(max-width:600px) {header {padding:18px 16px;gap:10px;} .header-text {flex:1;min-width:0;} .header-text h1 {font-size:1.05rem;} .header-badge {margin-left:0;} .panel-header {flex-wrap:wrap;} .panel-stats {margin-left:0;} .obj-header {flex-wrap:wrap;} .obj-title {min-width:0;} .kr-meta {overflow-wrap:anywhere;}}
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-icon">🏆</div>
+        <div class="header-text">
+            <h1>육가공마케팅팀 2026 OKR 대시보드</h1>
+            <p>팀 KPI · 개인별 분기 OKR 통합 현황판</p>
+        </div>
+        <div class="header-badge">2Q 2026</div>
+    </header>
+
+    <div class="main">
+<nav class="quarter-nav" aria-label="OKR 분기 선택"><label for="quarterSelect">2026년 분기 선택</label><select id="quarterSelect" onchange="window.location.assign(this.selectedOptions[0].dataset.url)"><option value="4" data-url="../index.html">4분기 (10~12월)</option><option value="3" data-url="q3.html">3분기 (7~9월)</option><option value="2" data-url="q2.html" selected>2분기 (4~6월)</option><option value="1" data-url="q1.html">1분기 (1~3월)</option></select><p>기본 화면은 4분기 · 이전 분기는 선택하여 조회</p></nav>
+
+        <!-- ═══ TEAM KPI ═══ -->
+        <section class="kpi-section">
+            <div class="section-toggle open" id="kpiToggle" onclick="toggleKPI()">
+                <div class="toggle-icon">🏆</div>
+                <h2>육가공마케팅팀 2026년 연간 KPI</h2>
+                <span class="chevron">▼</span>
+            </div>
+
+            <div class="kpi-grid" id="kpiGrid">
+                <!-- 과제 1 -->
+                <div class="kpi-card">
+                    <div class="kpi-card-num">과제 01</div>
+                    <div class="kpi-card-title">전사 통합 재무 목표 달성</div>
+                    <div class="kpi-item">
+                        <div class="kpi-bullet"></div><span><strong>매출 목표:</strong> 26년 매출목표 1,071억 초과 달성</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-bullet"></div><span><strong>손익 목표:</strong> 26년 손익목표 +4.18억 초과 달성</span>
+                    </div>
+                </div>
+
+                <!-- 과제 2 -->
+                <div class="kpi-card">
+                    <div class="kpi-card-num">과제 02</div>
+                    <div class="kpi-card-title">담당 카테고리 재무 목표 달성</div>
+                    <div class="kpi-item">
+                        <div class="kpi-bullet"></div><span><strong>매출 목표:</strong> 26년 매출 545.35억 초과 (축육 371.49억 + HMR 173.86억)</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-bullet"></div><span><strong>손익 목표:</strong> 26년 손익 -13.78억 초과 (축육 -14.32억 + HMR +0.54억)</span>
+                    </div>
+                </div>
+
+                <!-- 과제 3 -->
+                <div class="kpi-card">
+                    <div class="kpi-card-num">과제 03</div>
+                    <div class="kpi-card-title">장안유업 치즈 매출 확대</div>
+                    <div class="kpi-item">
+                        <div class="kpi-bullet"></div><span><strong>26년 B2B 치즈 순매출 목표:</strong> 44.48억원</span>
+                    </div>
+                </div>
+
+                <!-- 과제 4 -->
+                <div class="kpi-card">
+                    <div class="kpi-card-num">과제 04</div>
+                    <div class="kpi-card-title">대형 NPD 개발</div>
+                    <div class="kpi-item">
+                        <div class="kpi-bullet"></div><span><strong>26년 육가공마케팅팀 NPD 매출 목표:</strong> 21.13억</span>
+                    </div>
+                </div>
+
+                <!-- 과제 5 -->
+                <div class="kpi-card">
+                    <div class="kpi-card-num">과제 05</div>
+                    <div class="kpi-card-title">논산공장 원가 개선</div>
+                    <div class="kpi-item">
+                        <div class="kpi-bullet"></div><span><strong>25년 논산공장 원가율:</strong> 89.2%</span>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-bullet"></div><span><strong>26년 논산공장 목표원가율:</strong> 85.7%</span>
+                    </div>
+                </div>
+
+                <!-- 과제 6 -->
+                <div class="kpi-card">
+                    <div class="kpi-card-num">과제 06</div>
+                    <div class="kpi-card-title">전사 교육 이수</div>
+                    <div class="kpi-item">
+                        <div class="kpi-bullet"></div><span>필수+법정+선택 교육 인당 교육 이수율 100%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PERSON TABS ═══ -->
+        <section class="tabs-section">
+            <div class="tabs-label">팀원 개인 OKR 조회</div>
+            <div class="tabs-row">
+                <button class="tab-btn p0 active" onclick="switchTab(0)" id="tab0">
+                    <div class="tab-avatar">권</div>
+                    권미연 차장
+                </button>
+                <button class="tab-btn p1" onclick="switchTab(1)" id="tab1">
+                    <div class="tab-avatar">노</div>
+                    노경진 과장
+                </button>
+                <button class="tab-btn p2" onclick="switchTab(2)" id="tab2">
+                    <div class="tab-avatar">정</div>
+                    정나라 대리
+                </button>
+            </div>
+
+            <!-- ── 권미연 차장 ── -->
+            <div class="person-panel p0 active" id="panel0">
+                <div class="panel-header">
+                    <div class="panel-avatar">권</div>
+                    <div class="panel-meta">
+                        <h3>권미연 차장</h3>
+                        <span>육가공마케팅팀 · 2Q 2026 OKR</span>
+                    </div>
+                    <div class="panel-stats">
+                        <div class="stat-item">
+                            <div class="stat-num">3</div>
+                            <div class="stat-lbl">Objectives</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">8</div>
+                            <div class="stat-lbl">Key Results</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="objectives">
+                    <div class="objective-card">
+                        <div class="obj-header">
+                            <div class="obj-num">O1</div>
+                            <div class="obj-title">치즈 카테고리 시장 진입 검토</div>
+                            <div class="obj-tag">Growth</div>
+                        </div>
+                        <div class="kr-list">
+                            <div class="kr-item">
+                                <div class="kr-label">KR 1</div>
+                                <div class="kr-text">B2B_신세계 베이킹용 베이스 크림치즈 NPD 검토</div>
+                                <div class="kr-detail">신세계푸드 베이커리 채널 타겟으로 용도별 스펙(점도/산미/당도) 정의 및 샘플 테스트 진행, 거래처 요구조건 기반 맞춤형 제품 개발 방향 수립</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 2</div>
+                                <div class="kr-text">B2B_철은 베이글용 크림치즈 NPD 검토</div>
+                                <div class="kr-detail">베이글 전문 채널 특성에 맞춘 텍스처/편의성 중심 제품 기획 및 테스트 진행, B2B 전용 규격 및 가격 구조 설계</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 3</div>
+                                <div class="kr-text">B2C_스프레드 크림치즈 출시 검토</div>
+                                <div class="kr-detail">가정용 간편식/홈카페 트렌드 반영한 B2C 상품 기획, 용량/패키지/가격 포지셔닝 검토 및 온·오프라인 채널 적합성 검증</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="objective-card">
+                        <div class="obj-header">
+                            <div class="obj-num">O2</div>
+                            <div class="obj-title">자사 핵심 원료 기반 HMR 상품 검토</div>
+                            <div class="obj-tag">Product</div>
+                        </div>
+                        <div class="kr-list">
+                            <div class="kr-item">
+                                <div class="kr-label">KR 1</div>
+                                <div class="kr-text">핫도그 라인업 확장 (단품/빙과후원 등) 검토</div>
+                                <div class="kr-detail">채널별 소비자 니즈 반영한 SKU 확장 방향 검토 및 가격/용량/패키지 차별화 전략 수립</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 2</div>
+                                <div class="kr-text">자사 원료 (육가공+치즈) 기반 HMR 냉동간식 검토 (미니피자/치즈돈까스 등)</div>
+                                <div class="kr-detail">자사 원료 활용한 신규 HMR 카테고리 확장 검토, 제품 컨셉 및 원가/제조 가능성 기반 사업성 검토</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="objective-card">
+                        <div class="obj-header">
+                            <div class="obj-num">O3</div>
+                            <div class="obj-title">운영 상품 효율화 추진</div>
+                            <div class="obj-tag">Operations</div>
+                        </div>
+                        <div class="kr-list">
+                            <div class="kr-item">
+                                <div class="kr-label">KR 1</div>
+                                <div class="kr-text">치즈 스틱육포 품질 안정화 관리 (치즈 원료 스위칭)</div>
+                                <div class="kr-detail">치즈 원료 변경에 따른 품질 영향 검증 및 관능/물성 테스트 진행, 생산 안정성 및 클레임 리스크 최소화</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 2</div>
+                                <div class="kr-text">온라인 판매 활성화로 번들 패키지 검토 (가격 비교, 쿠팡 입점 제안 등)</div>
+                                <div class="kr-detail">온라인 채널 특성에 맞춘 묶음 구성 및 가격 경쟁력 확보 전략 수립, 쿠팡 등 주요 채널 입점 및 프로모션 연계 검토</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 3</div>
+                                <div class="kr-text">비주력/저회전 SKU 구조 정리 및 수익성 중심 포트폴리오 전환</div>
+                                <div class="kr-detail">저회전 및 저수익 SKU 정리 기준 수립 및 단계적 단종 추진, 핵심 SKU 중심으로 매출 및 손익 구조 개선</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 노경진 과장 ── -->
+            <div class="person-panel p1" id="panel1">
+                <div class="panel-header">
+                    <div class="panel-avatar">노</div>
+                    <div class="panel-meta">
+                        <h3>노경진 과장</h3>
+                        <span>육가공마케팅팀 · 2Q 2026 OKR</span>
+                    </div>
+                    <div class="panel-stats">
+                        <div class="stat-item">
+                            <div class="stat-num">3</div>
+                            <div class="stat-lbl">Objectives</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">7</div>
+                            <div class="stat-lbl">Key Results</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="objectives">
+                    <div class="objective-card">
+                        <div class="obj-header">
+                            <div class="obj-num">O1</div>
+                            <div class="obj-title">브랜드 경쟁력 강화 및 전략제품 활성화</div>
+                            <div class="obj-tag">Brand</div>
+                        </div>
+                        <div class="kr-list">
+                            <div class="kr-item">
+                                <div class="kr-label">KR 1</div>
+                                <div class="kr-text">쿠팡 채널 내 순수안심 브랜드 초기 성장기반 확보</div>
+                                <div class="kr-detail">판매실적 데이터 기반으로 행사 및 광고효율을 점검하고 리뷰, 판매활성화 방안 도출</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 2</div>
+                                <div class="kr-text">쿠팡 순수안심 육가공 브랜드 확장을 위한 추가 NPD 후보 발굴</div>
+                                <div class="kr-detail">쿠팡 채널 시장조사 기반 카테고리별 규모, 판매 트렌드, 소비자 구매패턴을 분석하여 추가 NPD 후보 도출</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="objective-card">
+                        <div class="obj-header">
+                            <div class="obj-num">O2</div>
+                            <div class="obj-title">육가공 매출 회복을 위한 제품 개발 확대</div>
+                            <div class="obj-tag">Growth</div>
+                        </div>
+                        <div class="kr-list">
+                            <div class="kr-item">
+                                <div class="kr-label">KR 1</div>
+                                <div class="kr-text">당사 강점기반 NPD product pool 확보</div>
+                                <div class="kr-detail">문어/한입/치즈/어묵 등 차별화 요소 기반 NPD product pool 구축</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 2</div>
+                                <div class="kr-text">시장데이터 기반 신규 제품 타당성 검증</div>
+                                <div class="kr-detail">마켓링크 데이터 분석을 통해 시장트렌드, 경쟁사 매출, 카테고리 규모를 기반으로 NPD 타당성 검증</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 3</div>
+                                <div class="kr-text">통매입 상품 검토 요청 대응 및 신규 후보 확보</div>
+                                <div class="kr-detail">검토 요청 100% 수행 및 리서치를 통한 신규 매출 창출 가능한 제품/거래처 발굴</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="objective-card">
+                        <div class="obj-header">
+                            <div class="obj-num">O3</div>
+                            <div class="obj-title">담당제품/사업 운영 고도화</div>
+                            <div class="obj-tag">Operations</div>
+                        </div>
+                        <div class="kr-list">
+                            <div class="kr-item">
+                                <div class="kr-label">KR 1</div>
+                                <div class="kr-text">논산공장 가동률 개선을 위한 NPD 개발</div>
+                                <div class="kr-detail">가동률 개선을 위한 범용성, 비축가능성, 대형 물량 관점의 NPD 검토</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 2</div>
+                                <div class="kr-text">논산공장 생산성 개선을 위한 SKU 관리</div>
+                                <div class="kr-detail">저효율 SKU 딜리션 실행 및 생산성 개선 관련 내부 협의 또는 개선 사례 도출</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 정나라 대리 ── -->
+            <div class="person-panel p2" id="panel2">
+                <div class="panel-header">
+                    <div class="panel-avatar">정</div>
+                    <div class="panel-meta">
+                        <h3>정나라 대리</h3>
+                        <span>육가공마케팅팀 · 2Q 2026 OKR</span>
+                    </div>
+                    <div class="panel-stats">
+                        <div class="stat-item">
+                            <div class="stat-num">3</div>
+                            <div class="stat-lbl">Objectives</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">9</div>
+                            <div class="stat-lbl">Key Results</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="objectives">
+                    <div class="objective-card">
+                        <div class="obj-header">
+                            <div class="obj-num">O1</div>
+                            <div class="obj-title">푸드페스타 박람회 기반 B2B 사업 기회 창출 및 브랜드 경쟁력 강화</div>
+                            <div class="obj-tag">Brand</div>
+                        </div>
+                        <div class="kr-list">
+                            <div class="kr-item">
+                                <div class="kr-label">KR 1</div>
+                                <div class="kr-text">채널 맞춤형 전시·시식 품목 전략적 선정 및 운영</div>
+                                <div class="kr-detail">FS 채널 활용도 높은 제품 중심의 전시·시식을 통해 제품 경쟁력 체감 및 고객 관심도 제고</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 2</div>
+                                <div class="kr-text">계열사 연계 솔루션 제안 및 차별화 경쟁력 강화</div>
+                                <div class="kr-detail">장안유업 치즈와 연계된 제품 시식·전시를 통해 원료-완제품 통합 솔루션을 제안하고, 당사 제품의 차별화 포인트 부각</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 3</div>
+                                <div class="kr-text">박람회 리드 확보 및 후속 진행 기반 구축</div>
+                                <div class="kr-detail">현장 상담 및 관심 고객 데이터 확보를 통해 후속 제안 및 NPD/납품 전환 기반 마련</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="objective-card">
+                        <div class="obj-header">
+                            <div class="obj-num">O2</div>
+                            <div class="obj-title">2026년 2Q B2B 신제품 출시 및 개발 검토</div>
+                            <div class="obj-tag">NPD</div>
+                        </div>
+                        <div class="kr-list">
+                            <div class="kr-item">
+                                <div class="kr-label">KR 1</div>
+                                <div class="kr-text">고객사 요청 기반 NPD 2건 이상 사양 확정 및 출시 리딩</div>
+                                <div class="kr-detail">NPD 사양·원가·생산·일정 전반을 통합 관리하여 안정적 출시 및 수익성 확보</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 2</div>
+                                <div class="kr-text">기존 NPD 판매 확산 및 제품 포트폴리오 구조 정비</div>
+                                <div class="kr-detail">기 운영 품목 거래처 확장 및 SKU 다변화(용량/규격/패키지) 통해 매출 볼륨 확대</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 3</div>
+                                <div class="kr-text">B2B 채널별 전략 제품 기획 및 제안 체계 구축</div>
+                                <div class="kr-detail">외식/급식/FF 채널별 특성을 반영한 전략 제품군 정의 및 제안 모델 구축을 통한 제안력 확보</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="objective-card">
+                        <div class="obj-header">
+                            <div class="obj-num">O3</div>
+                            <div class="obj-title">냉동 HMR·육가공 OEM 제품 포트폴리오 확장 및 개발 기반 정비</div>
+                            <div class="obj-tag">Portfolio</div>
+                        </div>
+                        <div class="kr-list">
+                            <div class="kr-item">
+                                <div class="kr-label">KR 1</div>
+                                <div class="kr-text">냉동 HMR·육가공 OEM 기반 신규 아이템 발굴 및 기획</div>
+                                <div class="kr-detail">시장 및 고객 니즈 기반으로 개발 가능 아이템을 도출하여 제품군 확장 기반 마련</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 2</div>
+                                <div class="kr-text">OEM 협업 체계 구축 및 개발 리소스 확보</div>
+                                <div class="kr-detail">협력사 발굴 및 운영을 통해 상품 개발 대응력 및 확장성 강화</div>
+                            </div>
+                            <div class="kr-item">
+                                <div class="kr-label">KR 3</div>
+                                <div class="kr-text">운영 품목 DB화 및 지속 관리 체계 구축</div>
+                                <div class="kr-detail">개발/검토 이력 및 상품 정보를 체계적으로 관리하여 제품 사양화 및 재활용 기반 확보</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        // KPI 섹션 펼침/접힘
+        function toggleKPI() {
+            const toggle = document.getElementById('kpiToggle');
+            const grid = document.getElementById('kpiGrid');
+            const isOpen = toggle.classList.contains('open');
+            if (isOpen) {
+                grid.style.display = 'none';
+                toggle.classList.remove('open');
+            } else {
+                grid.style.display = 'grid';
+                toggle.classList.add('open');
+            }
+        }
+
+        // 탭 전환
+        function switchTab(idx) {
+            document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === idx);
+            });
+            document.querySelectorAll('.person-panel').forEach((panel, i) => {
+                panel.classList.toggle('active', i === idx);
+            });
+        }
+    </script>
+</body>
+
+</html>
