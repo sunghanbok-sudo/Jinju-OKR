@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>육가공마케팅팀 2026 3분기 OKR 대시보드</title>
+    <title>육가공마케팅팀 2026 4분기 OKR 대시보드</title>
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
         :root {
@@ -621,6 +621,14 @@
             color: var(--kpi-accent);
         }
 
+
+        .quarter-nav {display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:28px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);}
+        .quarter-nav label {font-weight:700;font-size:.9rem;}
+        .quarter-nav select {font:inherit;color:var(--text);background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;cursor:pointer;max-width:100%;}
+        .quarter-nav p {font-size:.78rem;color:var(--text-muted);}
+        .obj-title,.kr-detail {white-space:pre-line;overflow-wrap:anywhere;}
+        header {flex-wrap:wrap;}
+        @media(max-width:600px) {header {padding:18px 16px;gap:10px;} .header-text {flex:1;min-width:0;} .header-text h1 {font-size:1.05rem;} .header-badge {margin-left:0;} .panel-header {flex-wrap:wrap;} .panel-stats {margin-left:0;} .obj-header {flex-wrap:wrap;} .obj-title {min-width:0;} .kr-meta {overflow-wrap:anywhere;}}
     </style>
 </head>
 
@@ -629,14 +637,13 @@
         <div class="header-icon">🏆</div>
         <div class="header-text">
             <h1>육가공마케팅팀 2026 OKR 대시보드</h1>
-            <p>첨부 등록양식 기준 · 개인별 3분기 OKR 통합 현황판</p>
+            <p>첨부 등록양식 기준 · 개인별 4분기 OKR 통합 현황판</p>
         </div>
-        <div class="header-badge">3Q 2026</div>
+        <div class="header-badge">4Q 2026</div>
     </header>
 
-    <div class="main">
-
-        <section class="kpi-section">
+<div class="main">
+<nav class="quarter-nav" aria-label="OKR 분기 선택"><label for="quarterSelect">2026년 분기 선택</label><select id="quarterSelect" onchange="window.location.assign(this.selectedOptions[0].dataset.url)"><option value="4" data-url="index.html" selected>4분기 (10~12월)</option><option value="3" data-url="quarters/q3.html">3분기 (7~9월)</option><option value="2" data-url="quarters/q2.html">2분기 (4~6월)</option><option value="1" data-url="quarters/q1.html">1분기 (1~3월)</option></select><p>기본 화면은 4분기 · 이전 분기는 선택하여 조회</p></nav>        <section class="kpi-section">
             <div class="section-toggle open" id="annualKpiToggle" onclick="toggleSection('annualKpiToggle', 'annualKpiGrid')">
                 <div class="toggle-icon">🏆</div>
                 <h2>육가공마케팅팀 2026년 연간 KPI</h2>
@@ -697,320 +704,23 @@
             </div>
         </section>
 
-        <section class="kpi-section">
-            <div class="section-toggle open" id="kpiToggle" onclick="toggleKPI()">
-                <div class="toggle-icon">🏆</div>
-                <h2>육가공마케팅팀 3분기 (7~9월) OKR 요약</h2>
-                <span class="chevron">▼</span>
-            </div>
-            <p class="source-note">팀장 복성한 · 작성일 26.07.03 · 원본 Excel의 긴 설명은 대시보드 가독성을 위해 핵심 문장 중심으로 요약 반영했습니다.</p>
-            <div class="kpi-grid" id="kpiGrid">
-                <div class="kpi-card">
-                    <div class="kpi-card-num">과제 01</div>
-                    <div class="kpi-card-title">3분기 OKR 등록 현황</div>
-                    <div class="kpi-item">
-                        <div class="kpi-bullet"></div><span><strong>팀원:</strong> 3명</span>
-                    </div>
-                    <div class="kpi-item">
-                        <div class="kpi-bullet"></div><span><strong>Objectives:</strong> 9개</span>
-                    </div>
-                    <div class="kpi-item">
-                        <div class="kpi-bullet"></div><span><strong>Key Results:</strong> 19개</span>
-                    </div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-card-num">과제 02</div>
-                    <div class="kpi-card-title">핵심/보조 과제 구성</div>
-                    <div class="kpi-item">
-                        <div class="kpi-bullet"></div><span><strong>핵심 과제:</strong> 11개</span>
-                    </div>
-                    <div class="kpi-item">
-                        <div class="kpi-bullet"></div><span><strong>보조 과제:</strong> 8개</span>
-                    </div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-card-num">과제 03</div>
-                    <div class="kpi-card-title">KPI 연계 및 선택평가</div>
-                    <div class="kpi-item">
-                        <div class="kpi-bullet"></div><span><strong>KPI 연계:</strong> 11개 KR</span>
-                    </div>
-                    <div class="kpi-item">
-                        <div class="kpi-bullet"></div><span><strong>효율성:</strong> 16개 · <strong>혁신성:</strong> 8개</span>
-                    </div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-card-num">과제 04</div>
-                    <div class="kpi-card-title">주요 KPI 연결 축</div>
-                    <div class="kpi-item">
-                        <div class="kpi-bullet"></div><span>장안유업 치즈 매출 확대 (개발 단계 · 매출 확대 기반 확보) · 장안유업 치즈 매출 확대 (매출 확대 기반 확보) · (GT 채널 매출 활성화 기반 확보) · 재무목표 달성 · 대형 NPD 개발 · 대형 NPD 개발 (출시 기반 확보)…</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="tabs-section">
-            <div class="tabs-label">팀원 개인 OKR 조회</div>
-            <div class="tabs-row">
-                <button class="tab-btn p0 active" onclick="switchTab(0)" id="tab0">
-                    <div class="tab-avatar">권</div>
-                    권미연 차장
-                </button>
-                <button class="tab-btn p1" onclick="switchTab(1)" id="tab1">
-                    <div class="tab-avatar">노</div>
-                    노경진 과장
-                </button>
-                <button class="tab-btn p2" onclick="switchTab(2)" id="tab2">
-                    <div class="tab-avatar">정</div>
-                    정나라 대리
-                </button>
-            </div>
-
-            <div class="person-panel p0 active" id="panel0">
-                <div class="panel-header">
-                    <div class="panel-avatar">권</div>
-                    <div class="panel-meta">
-                        <h3>권미연 차장</h3>
-                        <span>육가공마케팅팀 · 3분기 (7~9월) OKR</span>
-                    </div>
-                    <div class="panel-stats">
-                        <div class="stat-item"><div class="stat-num">3</div><div class="stat-lbl">Objectives</div></div>
-                        <div class="stat-item"><div class="stat-num">4</div><div class="stat-lbl">Key Results</div></div>
-                    </div>
-                </div>
-                <div class="objectives">
-                    <div class="objective-card">
-                        <div class="obj-header">
-                            <div class="obj-num">O1</div>
-                            <div class="obj-title">장안유업 치즈 기반 B2B 용도별 NPD 확대</div>
-                            <div class="obj-tag">Cheese</div>
-                        </div>
-                        <div class="kr-list">
-                            <div class="kr-item">
-                                <div class="kr-label">KR 1</div>
-                                <div class="kr-text">B2B 용도별 크림치즈 NPD 완료 및 고객사 제안 및 샘플 평가 완료</div>
-                                <div class="kr-detail">페스츄리·스프레드·바스크치즈케이크 등 용도별 NPD를 완료하고, 핵심 거래처(신세계푸드·FF · FS 등) 대상 샘플 평가를 통해 고객 요구사항 및 제품 스펙을 확정…</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill">KPI: 장안유업 치즈 매출 확대 (개발 단계 → 매출 확대 기반 확보)</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="objective-card">
-                        <div class="obj-header">
-                            <div class="obj-num">O2</div>
-                            <div class="obj-title">자사 육가공+치즈 원료 기반 HMR/냉동간식 사업성 검토</div>
-                            <div class="obj-tag">Cheese</div>
-                        </div>
-                        <div class="kr-list">
-                            <div class="kr-item">
-                                <div class="kr-label">KR 1</div>
-                                <div class="kr-text">자사 원료(육가공+치즈) 기반 HMR 냉동간식(미니피자 등) 원가·제조 가능성·사업성 검토 완료 및 출시 여부 의사결정안 도출</div>
-                                <div class="kr-detail">자사 원료 활용도가 높은 품목(미니피자 등) 중심. 제품 컨셉·원가·제조 가능성 기반 사업성 검토 → 출시 여부 의사결정안 도출</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill">KPI: 장안유업 치즈 매출 확대 (매출 확대 기반 확보)</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 2</div>
-                                <div class="kr-text">방과후 핫도그 생산처 이관 및 운영 안정화 완료</div>
-                                <div class="kr-detail">기존 거래처 생산중단(26.12.31) 대응. 대체 생산처 선정·견적·생산성 검토 완료로 안정적 공급 체계 구축</div>
-                                <div class="kr-meta"><span class="meta-pill">보조</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="objective-card">
-                        <div class="obj-header">
-                            <div class="obj-num">O3</div>
-                            <div class="obj-title">GT 채널 매출 활성화를 위한 통매입 상품 사업성 검토 및 운영안 수립</div>
-                            <div class="obj-tag">GT</div>
-                        </div>
-                        <div class="kr-list">
-                            <div class="kr-item">
-                                <div class="kr-label">KR 1</div>
-                                <div class="kr-text">GT 채널 매출 확대를 위한 통매입 상품 운영안 도출 (김치/기능성 젤리 등)</div>
-                                <div class="kr-detail">당사 제조 역량 확장이 아닌 GT 채널 매출 보완·상품 구색 확대 목적 시장성·손익 분석 기반 운영 가능성 검토 → 제조사 협업 및 운영 프로세스 운영안 수립</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="person-panel p1" id="panel1">
-                <div class="panel-header">
-                    <div class="panel-avatar">노</div>
-                    <div class="panel-meta">
-                        <h3>노경진 과장</h3>
-                        <span>육가공마케팅팀 · 3분기 (7~9월) OKR</span>
-                    </div>
-                    <div class="panel-stats">
-                        <div class="stat-item"><div class="stat-num">3</div><div class="stat-lbl">Objectives</div></div>
-                        <div class="stat-item"><div class="stat-num">7</div><div class="stat-lbl">Key Results</div></div>
-                    </div>
-                </div>
-                <div class="objectives">
-                    <div class="objective-card">
-                        <div class="obj-header">
-                            <div class="obj-num">O1</div>
-                            <div class="obj-title">축육 신제품 파이프라인 확보 및 CAPA 효율형 전략제품 개발</div>
-                            <div class="obj-tag">Pipeline</div>
-                        </div>
-                        <div class="kr-list">
-                            <div class="kr-item">
-                                <div class="kr-label">KR 1</div>
-                                <div class="kr-text">B2C 신제품 컨셉 도출 2건 및 개발 완료를 통한 출시검토안 도출 1건</div>
-                                <div class="kr-detail">3분기 내 신제품 개발 단계를 구분하여 관리하고, 지속 가능한 신제품 파이프라인을 확보</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill">KPI: 재무목표 달성</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 2</div>
-                                <div class="kr-text">공장 비축 가능 신제품(냉동·대단량 비엔나류) 컨셉 확정 2건 확보</div>
-                                <div class="kr-detail">CAPA 운영 효율화 우선순위. 공장 비축·가동 효율에 유리한 전략제품 후보 도출 2건</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill">KPI: 대형 NPD 개발</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 3</div>
-                                <div class="kr-text">당사 강점 기술 기반 전략제품 1종 샘플 개발 완료</div>
-                                <div class="kr-detail">차별화 기술을 활용한 고부가가치 전략제품 개발로 경쟁력 강화 목적</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill">KPI: 대형 NPD 개발</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="objective-card">
-                        <div class="obj-header">
-                            <div class="obj-num">O2</div>
-                            <div class="obj-title">축육 저수익/적자 SKU 효율화</div>
-                            <div class="obj-tag">Efficiency</div>
-                        </div>
-                        <div class="kr-list">
-                            <div class="kr-item">
-                                <div class="kr-label">KR 1</div>
-                                <div class="kr-text">축육 저수익/적자 SKU 딜리션 후보 리스트 확정 및 단종 검토안(의사결정안) 도출</div>
-                                <div class="kr-detail">저수익 SKU를 정비하여 카테고리 수익성과 운영 효율 개선에 기여</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="objective-card">
-                        <div class="obj-header">
-                            <div class="obj-num">O3</div>
-                            <div class="obj-title">신제품 출시 리스크 관리 및 운영 고도화</div>
-                            <div class="obj-tag">Risk</div>
-                        </div>
-                        <div class="kr-list">
-                            <div class="kr-item">
-                                <div class="kr-label">KR 1</div>
-                                <div class="kr-text">신규개발 요청건 NPD Hurdle 검토율 100% 이행 및 출시 신제품 VOC 점검·개선안 도출</div>
-                                <div class="kr-detail">출시 전 사전 검증과 출시 후 VOC 분석을 통해 신제품 리스크를 최소화하고 품질을 지속 개선</div>
-                                <div class="kr-meta"><span class="meta-pill">보조</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 2</div>
-                                <div class="kr-text">B2C 신제품 연계 거래처 선제 제안 2건 완료</div>
-                                <div class="kr-detail">개발 성과를 거래처 제안으로 연계하여 사업화 기회를 확대</div>
-                                <div class="kr-meta"><span class="meta-pill">보조</span><span class="meta-pill">KPI: 재무목표 달성</span><span class="meta-pill innovation">혁신성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 3</div>
-                                <div class="kr-text">축육사업협의체 안건관리 및 데이터 기반 경쟁사 동향분석 인사이트 리포트 1회 발행</div>
-                                <div class="kr-detail">협업 기반 의사결정과 시장 분석을 통해 신제품 전략 수립을 지원</div>
-                                <div class="kr-meta"><span class="meta-pill">보조</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="person-panel p2" id="panel2">
-                <div class="panel-header">
-                    <div class="panel-avatar">정</div>
-                    <div class="panel-meta">
-                        <h3>정나라 대리</h3>
-                        <span>육가공마케팅팀 · 3분기 (7~9월) OKR</span>
-                    </div>
-                    <div class="panel-stats">
-                        <div class="stat-item"><div class="stat-num">3</div><div class="stat-lbl">Objectives</div></div>
-                        <div class="stat-item"><div class="stat-num">8</div><div class="stat-lbl">Key Results</div></div>
-                    </div>
-                </div>
-                <div class="objectives">
-                    <div class="objective-card">
-                        <div class="obj-header">
-                            <div class="obj-num">O1</div>
-                            <div class="obj-title">B2B 신제품 출시 실행력 강화(고객사 요청 대응)</div>
-                            <div class="obj-tag">Launch</div>
-                        </div>
-                        <div class="kr-list">
-                            <div class="kr-item">
-                                <div class="kr-label">KR 1</div>
-                                <div class="kr-text">고객사 요청 기반 NPD 2건 사양 확정 및 출시 리딩</div>
-                                <div class="kr-detail">고객사 니즈 반영한 NPD 개발~출시까지 프로젝트 리딩하여 신규 매출 창출 확보 (사양 확정 → 샘플 평가 완료 → 출시)</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill">KPI: 대형 NPD 개발</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 2</div>
-                                <div class="kr-text">NPD 개발 단계별 실행 Task 관리 및 안정적 출시 체계 운영(코드생성·디자인·일정 완료)</div>
-                                <div class="kr-detail">코드 생성·디자인·일정 등 단계별 출시 실행을 체계적으로 관리하고 유관부서 협업 리딩</div>
-                                <div class="kr-meta"><span class="meta-pill">보조</span><span class="meta-pill">KPI: 대형 NPD 개발 (출시 기반 확보)</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 3</div>
-                                <div class="kr-text">NPD 개발 이력 DB 및 고객사 피드백 관리 체계 구축 완료</div>
-                                <div class="kr-detail">출시·보류·Drop 피드백을 체계적으로 관리하여 향후 개발 및·제안 전략 수립 기반 활용</div>
-                                <div class="kr-meta"><span class="meta-pill">보조</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="objective-card">
-                        <div class="obj-header">
-                            <div class="obj-num">O2</div>
-                            <div class="obj-title">B2B Key Account 선제 제안 및 채널별 성장 아이템 발굴</div>
-                            <div class="obj-tag">Growth</div>
-                        </div>
-                        <div class="kr-list">
-                            <div class="kr-item">
-                                <div class="kr-label">KR 1</div>
-                                <div class="kr-text">Key Account 선제 제안 및 적용 추진(거래처 제안 완료) 2건 이상</div>
-                                <div class="kr-detail">고객사 요청 대응뿐 아니라 FF/FS/급식/외식 채널별 니즈 및 경쟁사 벤치마크 기반 선제 제안 강하여 차별화 제안 완료 및 적용 협의 추진(핵심 거래처별 니즈 사전 분석…</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill">KPI: 대형 NPD 개발 (매출 확대 기반 확보)</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 2</div>
-                                <div class="kr-text">FF/FS(외식·급식) 채널 트렌드 조사 기반 신규 성장 아이템 발굴 2건 및 기획안 도출</div>
-                                <div class="kr-detail">채널별 니즈·경쟁사 벤치마크 기반. 채널 특성에 적합한 신규 아이템 발굴 → 개발 방향 기획안 도출</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill">KPI: 대형 NPD 개발 (개발 기반 확보)</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 3</div>
-                                <div class="kr-text">경쟁사 Benchmark 기반 거래처 맞춤형 제안 자료 수립 완료</div>
-                                <div class="kr-detail">쟁사 제품 및 시장 사례를 분석하여 거래처 유형별 제안 자료를 표준화하고 제안 경쟁력을 확보</div>
-                                <div class="kr-meta"><span class="meta-pill">보조</span><span class="meta-pill">KPI: 대형 NPD 개발 (제안 기반 확보)</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="objective-card">
-                        <div class="obj-header">
-                            <div class="obj-num">O3</div>
-                            <div class="obj-title">기존 운영 품목 개선 및 판매 확대</div>
-                            <div class="obj-tag">Portfolio</div>
-                        </div>
-                        <div class="kr-list">
-                            <div class="kr-item">
-                                <div class="kr-label">KR 1</div>
-                                <div class="kr-text">기존 운영 품목 판매 확대를 위한 개선안 3건 이상 도출</div>
-                                <div class="kr-detail">규격·배합·포장 등 개선안을 발굴하고 적용 가능성을 검토하여 판매 확대 기반 확보</div>
-                                <div class="kr-meta"><span class="meta-pill core">핵심</span><span class="meta-pill efficiency">효율성</span></div>
-                            </div>
-                            <div class="kr-item">
-                                <div class="kr-label">KR 2</div>
-                                <div class="kr-text">카테고리별 전략 아이템 Pool 구축 및 중장기 개발 로드맵 기초 마련</div>
-                                <div class="kr-detail">성장 품목과 운영 효율 개선 대상을 반영한 카테고리별 전략 아이템 확보 및 중장기 로드맵 기초 자료 구축</div>
-                                <div class="kr-meta"><span class="meta-pill">보조</span><span class="meta-pill innovation">혁신성</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script>
+<section class="kpi-section"><div class="section-toggle open" id="kpiToggle" onclick="toggleKPI()"><div class="toggle-icon">🏆</div><h2>육가공마케팅팀 4분기 (10~12월) OKR 요약</h2><span class="chevron">▼</span></div><p class="source-note">팀장 복성한 · 작성일 26.10.02 · 첨부 4분기 등록양식 기준 · 목표·핵심결과·설명·KPI 연계 및 선택평가를 원문 그대로 반영했습니다. 연간 KPI는 기존 등록 내용을 유지했습니다.</p><div class="kpi-grid" id="kpiGrid"><div class="kpi-card"><div class="kpi-card-num">과제 01</div><div class="kpi-card-title">4분기 OKR 등록 현황</div><div class="kpi-item"><div class="kpi-bullet"></div><span><strong>팀원:</strong> 3명</span></div><div class="kpi-item"><div class="kpi-bullet"></div><span><strong>Objectives:</strong> 10개</span></div><div class="kpi-item"><div class="kpi-bullet"></div><span><strong>Key Results:</strong> 22개</span></div></div><div class="kpi-card"><div class="kpi-card-num">과제 02</div><div class="kpi-card-title">개인별 등록 현황</div><div class="kpi-item"><div class="kpi-bullet"></div><span><strong>권미연:</strong> 목표 4개 · 핵심결과 8개</span></div><div class="kpi-item"><div class="kpi-bullet"></div><span><strong>노경진:</strong> 목표 3개 · 핵심결과 7개</span></div><div class="kpi-item"><div class="kpi-bullet"></div><span><strong>정나라:</strong> 목표 3개 · 핵심결과 7개</span></div></div><div class="kpi-card"><div class="kpi-card-num">과제 03</div><div class="kpi-card-title">선택평가 및 KPI 연계</div><div class="kpi-item"><div class="kpi-bullet"></div><span><strong>KPI 연계:</strong> 18개</span></div><div class="kpi-item"><div class="kpi-bullet"></div><span><strong>선택평가:</strong> 효율성·혁신성은 원본 O 항목에 표시</span></div><div class="kpi-item"><div class="kpi-bullet"></div><span><strong>평가 구분:</strong> 원본에 없는 핵심·보조 등급은 부여하지 않음</span></div></div></div></section><section class="tabs-section"><div class="tabs-label">팀원 개인 OKR 조회</div><div class="tabs-row"><button class="tab-btn p0 active" onclick="switchTab(0)" id="tab0"><div class="tab-avatar">권</div>권미연 차장</button><button class="tab-btn p1" onclick="switchTab(1)" id="tab1"><div class="tab-avatar">노</div>노경진 과장</button><button class="tab-btn p2" onclick="switchTab(2)" id="tab2"><div class="tab-avatar">정</div>정나라 대리</button></div><div class="person-panel p0 active" id="panel0"><div class="panel-header"><div class="panel-avatar">권</div><div class="panel-meta"><h3>권미연 차장</h3><span>육가공마케팅팀 · 4분기 (10~12월) OKR</span></div><div class="panel-stats"><div class="stat-item"><div class="stat-num">4</div><div class="stat-lbl">Objectives</div></div><div class="stat-item"><div class="stat-num">8</div><div class="stat-lbl">Key Results</div></div></div></div><div class="objectives"><div class="objective-card"><div class="obj-header"><div class="obj-num">O1</div><div class="obj-title">장안유업 치즈 기반 전략 NPD 확대 및 B2B 사업화 기반 구축
+(베트남 그릴링치즈, 샐러디 크림치즈, 내열성 크림치즈/롤치즈)</div></div><div class="kr-list"><div class="kr-item" data-source-row="9"><div class="kr-label">KR 1</div><div class="kr-text">베트남향 구워먹는치즈 제품 스펙 확정 및 사업화 검토안 도출</div><div class="kr-detail">베트남 시장 요구조건 및 장안유업 생산조건을 반영하여 원료·규격·가격대별 제품 스펙을 구체화하고, 샘플 평가를 통해 사업화 가능 여부 도출</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 상품 사업 중점 추진 과제 실행 (구워먹는치즈 전략적 상품화 설계 및 채널 확대 모색)</span><span class="meta-pill innovation">혁신성</span></div></div><div class="kr-item" data-source-row="10"><div class="kr-label">KR 2</div><div class="kr-text">내열성 치즈 용도별 샘플 평가 완료 및 제품 개선 방향 확정</div><div class="kr-detail">고객 용도별 요구조건을 기준으로 내열성·물성·관능을 평가하고, 기존 제품 대비 개선 스펙 및 후속 개발 방향 확정</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 상품 사업 중점 추진 과제 실행 (채널별 B2B 치즈 사업 검토)</span><span class="meta-pill innovation">혁신성</span></div></div><div class="kr-item" data-source-row="11"><div class="kr-label">KR 3</div><div class="kr-text">치즈 Variation 개발 Pool 확대 및 B2B 제안 아이템 구체화</div><div class="kr-detail">Corn·K-flavor·Buttermilk 및 샐러디/CVS/B2B용 Variation을 검토하여 적용 가능 아이템을 선별하고 후속 NPD 후보군 확보</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 상품 사업 중점 추진 과제 실행 (채널별 B2B 치즈 사업 검토)</span><span class="meta-pill innovation">혁신성</span></div></div></div></div><div class="objective-card"><div class="obj-header"><div class="obj-num">O2</div><div class="obj-title">27년 냉동간식 NPD 파이프라인 확보 및 출시 준비
+(한입 핫도그, 콘치즈 붕어빵, 미니피자, 팬케익)</div></div><div class="kr-list"><div class="kr-item" data-source-row="12"><div class="kr-label">KR 1</div><div class="kr-text">27년 전략 냉동간식 NPD 후보 선정 및 제품별 개발 로드맵 확정</div><div class="kr-detail">한입 핫도그·콘치즈 붕어빵·미니피자·냉동 팬케익 등 후보의 시장성·원가·제조 가능성 및 채널 적합성을 비교
+우선 개발 품목과 출시 로드맵 확정</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 상품 사업 중점 추진 과제 실행 (채널별 B2C 치즈 사업 검토)</span><span class="meta-pill innovation">혁신성</span></div></div><div class="kr-item" data-source-row="13"><div class="kr-label">KR 2</div><div class="kr-text">우선 NPD 품목 제조사 선정 및 샘플 평가 단계 진입</div><div class="kr-detail">선정 품목별 제조사 CAPA·MOQ·원가를 검토하고 샘플 개발 및 평가를 진행하여 27년 출시를 위한 개발 기반 확보</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 상품 사업 중점 추진 과제 실행 (채널별 B2C 치즈 사업 검토)</span><span class="meta-pill innovation">혁신성</span></div></div></div></div><div class="objective-card"><div class="obj-header"><div class="obj-num">O3</div><div class="obj-title">운영 상품 생산 안정화 및 공급구조 개선
+(방과후 핫도그, 호떡)</div></div><div class="kr-list"><div class="kr-item" data-source-row="14"><div class="kr-label">KR 1</div><div class="kr-text">방과후 핫도그 생산처 이관 확정 및 양산 준비 완료</div><div class="kr-detail">기존 제조사 생산중단(26.12.31)에 대응하여 대체 생산처의 견적·MOQ·품질·생산조건을 확정하고 안정적인 공급 전환 준비 완료</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 상품 사업 중점 추진 과제 실행 (천하장사 브랜드 기반 신규 카테고리 확장)</span><span class="meta-pill efficiency">효율성</span></div></div><div class="kr-item" data-source-row="15"><div class="kr-label">KR 2</div><div class="kr-text">땅콩꿀호떡 제조사 이관 및 패키지 전환 완료</div><div class="kr-detail">제조사 이관에 따른 표시사항 검수, 디자인 리뉴얼 및 포장재 제작을 완료하고 초도 생산까지 연계하여 운영 공백 최소화</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 상품 사업 중점 추진 과제 실행 (대형 카테고리 사업 관리 강화 및 최적화 추진)</span><span class="meta-pill efficiency">효율성</span></div></div></div></div><div class="objective-card"><div class="obj-header"><div class="obj-num">O4</div><div class="obj-title">신규 통매입 상품 사업성 검토 및 운영 확대 기반 확보</div></div><div class="kr-list"><div class="kr-item" data-source-row="16"><div class="kr-label">KR 1</div><div class="kr-text">전략 통매입 후보 상품 사업성 평가 및 운영 여부 의사결정</div><div class="kr-detail">마루베니 냉동치킨·종근당 등 신규 통매입 후보의 시장가격·매입조건·MOQ·손익·채널 적합성을 분석하여 운영 가능 상품 선별 및 거래조건 확정</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 상품 사업 중점 추진 과제 실행</span><span class="meta-pill innovation">혁신성</span></div></div></div></div></div></div><div class="person-panel p1" id="panel1"><div class="panel-header"><div class="panel-avatar">노</div><div class="panel-meta"><h3>노경진 과장</h3><span>육가공마케팅팀 · 4분기 (10~12월) OKR</span></div><div class="panel-stats"><div class="stat-item"><div class="stat-num">3</div><div class="stat-lbl">Objectives</div></div><div class="stat-item"><div class="stat-num">7</div><div class="stat-lbl">Key Results</div></div></div></div><div class="objectives"><div class="objective-card"><div class="obj-header"><div class="obj-num">O1</div><div class="obj-title">27년 저가동 대응을 위한 신규 물량 및 공장 운영 과제 검토</div></div><div class="kr-list"><div class="kr-item" data-source-row="17"><div class="kr-label">KR 1</div><div class="kr-text">신규 물량 확보 가능 과제 2건 이상 비교 검토 및 검토 방향 정리</div><div class="kr-detail">* 대형거래처 OEM, 외주 품목 인하우스 전환 등 논산공장 신규 확보 가능 물량 과제별 물량·판가·원가 검토
+* 고정비 Cover 기여도 관점에서 과제점검</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 논산공장 원가 개선</span><span class="meta-pill efficiency">효율성</span></div></div><div class="kr-item" data-source-row="18"><div class="kr-label">KR 2</div><div class="kr-text">설비투자 우선순위 및 투자 연계 가능 신제품 검토</div><div class="kr-detail">* 투자 시 확보 가능한 CAPA와 연계 가능한 신제품 후보 검토
+* 투자 검토에 필요한 예상 물량·CAPA·사업성 자료 정리</div><div class="kr-meta"><span class="meta-pill">KPI 연계: X</span><span class="meta-pill innovation">혁신성</span></div></div></div></div><div class="objective-card"><div class="obj-header"><div class="obj-num">O2</div><div class="obj-title">축육 부진 품목 원인 파악 및 개선과제 도출</div></div><div class="kr-list"><div class="kr-item" data-source-row="19"><div class="kr-label">KR 1</div><div class="kr-text">공장 원가·판매 데이터 정기 점검 및 주요 이슈 정리</div><div class="kr-detail">* 월 마감 손익 데이터 기반 부진 품목 점검 및 손익 악화 원인 점검
+* 채널·제품군·거래처별 손익 변화 및 주요 증감요인 정리
+* 월 단위 점검 자료 보고 및 육가공 협의체를 통해 정기 이슈 논의</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 논산공장 원가 개선</span></div></div><div class="kr-item" data-source-row="20"><div class="kr-label">KR 2</div><div class="kr-text">부진 품목·거래처 원인 진단 및 우선 검토과제 정리</div><div class="kr-detail">* 부진 사유를 구체적 원인점검을 통해 유형 구분
+* 손실 규모·지속성 등을 기준으로 우선 검토 대상 정리
+* 배합·생산처·규격 변경 등 원가 개선안의 적용 가능성 검토</div><div class="kr-meta"><span class="meta-pill">KPI 연계: X</span><span class="meta-pill efficiency">효율성</span></div></div></div></div><div class="objective-card"><div class="obj-header"><div class="obj-num">O3</div><div class="obj-title">신제품 개발 및 27년 NPD 파이프라인 확보</div></div><div class="kr-list"><div class="kr-item" data-source-row="21"><div class="kr-label">KR 1</div><div class="kr-text">전략채널(쿠팡·마켓컬리·오아시스) 신규 NPD 방향성 점검 및 제안 후보 정리</div><div class="kr-detail">* 채널별 판매 데이터·시장 조사 기반 신규 NPD 방향성 점검
+* 건강하닭 닭가슴살바·순수안심 슬라이스햄 등 온라인 신규 예정 제품 배합·규격·손익 점검
+* 설비 및 생산조건 협의를 통한 출시 조건 조율</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 대형 NPD 개발</span><span class="meta-pill innovation">혁신성</span></div></div><div class="kr-item" data-source-row="22"><div class="kr-label">KR 2</div><div class="kr-text">논산, HMR 27년 NPD 개발 후보 구체화 및 출시 가능성 검토</div><div class="kr-detail">* 신제품 규격 구현에 필요한 설비·생산조건 사전 점검 및 HMR 신규 거래선 컨텍
+* 설비 투자 필요 시 투자 대비 사업성 검토, HMR 신제품 방향성 및 허들 점검
+* 배합·규격·손익 검토 및 출시 가능 시 초기 판매계획 검토</div><div class="kr-meta"><span class="meta-pill">KPI 연계: X</span><span class="meta-pill innovation">혁신성</span></div></div><div class="kr-item" data-source-row="23"><div class="kr-label">KR 3</div><div class="kr-text">꼬치후랑크 월별 시장판매 데이터 기반 개발 방향 검토</div><div class="kr-detail">* 월별 시장 판매 데이터로 채널·제조사·SKU 동향 분석
+* 경쟁 구도 변화를 반영한 Flavor·스펙 개발 방향 검토
+* 분석 결과를 개발 과제 우선순위 검토의 근거로 활용</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 대형 NPD 개발</span></div></div></div></div></div></div><div class="person-panel p2" id="panel2"><div class="panel-header"><div class="panel-avatar">정</div><div class="panel-meta"><h3>정나라 대리</h3><span>육가공마케팅팀 · 4분기 (10~12월) OKR</span></div><div class="panel-stats"><div class="stat-item"><div class="stat-num">3</div><div class="stat-lbl">Objectives</div></div><div class="stat-item"><div class="stat-num">7</div><div class="stat-lbl">Key Results</div></div></div></div><div class="objectives"><div class="objective-card"><div class="obj-header"><div class="obj-num">O1</div><div class="obj-title">B2B NPD 사업화 및 매출 확대 기반 강화</div></div><div class="kr-list"><div class="kr-item" data-source-row="24"><div class="kr-label">KR 1</div><div class="kr-text">고객사 요청 기반 NPD 2건 사양 확정 및 출시 리딩</div><div class="kr-detail">NPD 사양·원가·생산·일정 전반을 통합 관리하여 안정적 출시 및 수익성 확보</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 대형 NPD 개발</span><span class="meta-pill efficiency">효율성</span></div></div><div class="kr-item" data-source-row="25"><div class="kr-label">KR 2</div><div class="kr-text">출시 NPD 후속 운영 점검 및 추가 매출 확대 방안 도출</div><div class="kr-detail">초기 운영 현황과 고객사 피드백 점검하여 추가 물량·적용처 확대 등 후속 매출 확대 기반 마련</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 대형 NPD 개발</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div></div></div></div><div class="objective-card"><div class="obj-header"><div class="obj-num">O2</div><div class="obj-title">B2B 채널·거래처 맞춤형 선제 제안 경쟁력 강화</div></div><div class="kr-list"><div class="kr-item" data-source-row="26"><div class="kr-label">KR 1</div><div class="kr-text">거래처별 사업 특성 및 니즈 기반 맞춤형 제안 아이템 3건 이상 발굴</div><div class="kr-detail">거래처별 사업 유형, 주요 제품 및 채널 특성을 분석하여 니즈에 부합하는 맞춤형 제안 아이템 발굴 및 제품 개발 방향 구체화</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 대형 NPD 개발</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div></div><div class="kr-item" data-source-row="27"><div class="kr-label">KR 2</div><div class="kr-text">주요 거래처·경쟁사 Benchmark 기반 B2B 시장·제품 정보 DB 고도화</div><div class="kr-detail">니즈 및 시장 정보를 체계적으로 수집·업데이트하여 거래처별 선제 제안의 기초자료 활용</div><div class="kr-meta"><span class="meta-pill">KPI 연계: X</span><span class="meta-pill efficiency">효율성</span></div></div><div class="kr-item" data-source-row="28"><div class="kr-label">KR 3</div><div class="kr-text">선제 개발 제품 Target 거래처 제안 및 고객 피드백 확보</div><div class="kr-detail">개발 제품 선제적 제안 진행 및 고객사 피드백 확보하여 후속 NPD 개발 및 사업화 가능성 검토</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 대형 NPD 개발</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div></div></div></div><div class="objective-card"><div class="obj-header"><div class="obj-num">O3</div><div class="obj-title">OEM·HMR 운영 품목 경쟁력 강화 및 운영 효율화</div></div><div class="kr-list"><div class="kr-item" data-source-row="29"><div class="kr-label">KR 1</div><div class="kr-text">주요 운영 품목별 수익성·판매·품질·공급 Risk 점검 및 개선과제 도출</div><div class="kr-detail">담당 OEM·HMR 품목의 수익성·판매·품질·공급 현황을 종합 점검하여 판매 확대 및 품목 경쟁력 강화를 위한 개선과제 도출</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 담당 카테고리 재무 목표 달성</span></div></div><div class="kr-item" data-source-row="30"><div class="kr-label">KR 2</div><div class="kr-text">OEM 제조사 및 생산 품목 Pool 구축을 통한 신속 대응 기반 마련</div><div class="kr-detail">기존 거래처 및 신규 OEM 제조사의 생산 가능 품목·역량 사전 파악하여 품질·가격·공급 이슈, 리뉴얼 및 NPD 발생 시 적합 제조사 신속 발굴 기반 마련</div><div class="kr-meta"><span class="meta-pill">KPI 연계: O</span><span class="meta-pill">KPI: 담당 카테고리 재무 목표 달성</span><span class="meta-pill efficiency">효율성</span><span class="meta-pill innovation">혁신성</span></div></div></div></div></div></div></section></div>    <script>
         function toggleSection(toggleId, gridId) {
             const toggle = document.getElementById(toggleId);
             const grid = document.getElementById(gridId);
